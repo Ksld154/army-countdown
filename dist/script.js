@@ -48,7 +48,8 @@ function plotProgressChart() {
   chart.textContent = roundedPercent + "%";
 
   new EasyPieChart(chart, {
-    size: 230,
+
+    size: (screen.width > 500) ? 230 : 150,
     barColor: function (percent) {
       var ctx = this.renderer.getCtx();
       var canvas = this.renderer.getCanvas();
@@ -65,8 +66,13 @@ function plotProgressChart() {
 
 
   });
-  // const canvas = document.getElementsByTagName("canvas")[0];
-  // //注意：这里不能带单位，默认是像素。如果使用诸如100%之类的，会被解析为0
-  // canvas.width = 230;
-  // canvas.height = 230;
+  // $(".canvas").css("width", "");
+  // $(".canvas").css("height", "");
+  let canvas2 = document.getElementsByTagName("canvas")[0];
+  // canvas2.removeAttribute("width");
+  // canvas2.removeAttribute("height");
+
+  //注意：这里不能带单位，默认是像素。如果使用诸如100%之类的，会被解析为0
+  // canvas.width = "";
+  // canvas.height = "";
 }
