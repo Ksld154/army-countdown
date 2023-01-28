@@ -4,4 +4,4 @@ services:
     ports:
       - '9999:80'
     container_name: army-countdown
-    image: countdown-server
+    image: army-test1
