@@ -48,7 +48,7 @@ function plotProgressChart() {
   chart.textContent = roundedPercent + "%";
 
   new EasyPieChart(chart, {
-    size: 150,
+    size: 230,
     barColor: function (percent) {
       var ctx = this.renderer.getCtx();
       var canvas = this.renderer.getCanvas();

@@ -117,4 +117,11 @@ body.light-theme h1 {
     height: 150px;
     color: white;
   }
+
+  .container .box canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
