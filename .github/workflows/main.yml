@@ -18,7 +18,13 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: Ksld154/army-countdown
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
