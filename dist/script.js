@@ -62,6 +62,11 @@ function plotProgressChart() {
     trackColor: "#373737",
     lineCap: "circle",
     animate: 2000,
-  });
 
+
+  });
+  // const canvas = document.getElementsByTagName("canvas")[0];
+  // //注意：这里不能带单位，默认是像素。如果使用诸如100%之类的，会被解析为0
+  // canvas.width = 230;
+  // canvas.height = 230;
 }
