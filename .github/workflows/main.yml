@@ -23,7 +23,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: Ksld154/army-countdown
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          images: ghcr.io/Ksld154/army-countdown
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
