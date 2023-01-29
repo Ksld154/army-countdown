@@ -1,0 +1,21 @@
+{
+    "name": "Army CountDown",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#151514",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./images/calendar-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./images/calendar-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -93,7 +93,7 @@ body.light-theme h1 {
 
 
 
-@media(max-width: 550px) {
+@media (min-width: 320px) and (max-width: 550px) {
   body.light-theme .filpdown {
     width: 100%;
     height: 100px;
@@ -130,4 +130,30 @@ body.light-theme h1 {
     width: 100px;
   } */
 
+}
+
+@media(max-width: 320px) {
+  body.light-theme .filpdown {
+    width: 100%;
+    height: 100px;
+  }
+
+  body.light-theme h1 {
+    font-size: 2em;
+  }
+
+  .container .box {
+    width: 100px;
+  }
+
+  .container .box .chart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 100px;
+    height: 100px;
+    color: white;
+  }
 }

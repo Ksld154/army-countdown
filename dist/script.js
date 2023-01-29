@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  registerServiceWorker();
+
   let body = document.body;
   body.classList.toggle('light-theme');
 
@@ -47,9 +49,21 @@ function plotProgressChart() {
   chart.setAttribute("data-percent", roundedPercent);
   chart.textContent = roundedPercent + "%";
 
+  let sz = 100;
+  if (screen.width > 500) {
+    sz = 230;
+  } else if (screen.width > 320) {
+    sz = 150;
+  } else {
+    sz = 100;
+  }
+
   new EasyPieChart(chart, {
 
-    size: (screen.width > 500) ? 230 : 150,
+    // size: (screen.width > 500) ? 230 : 150,
+
+    size: sz,
+
     barColor: function (percent) {
       var ctx = this.renderer.getCtx();
       var canvas = this.renderer.getCanvas();
@@ -75,4 +89,17 @@ function plotProgressChart() {
   //注意：这里不能带单位，默认是像素。如果使用诸如100%之类的，会被解析为0
   // canvas.width = "";
   // canvas.height = "";
+}
+
+function registerServiceWorker() {
+  // Reference the serviceWorker.
+  const serviceWorker = navigator.serviceWorker;
+
+  // Register our ServiceWorker script, if serviceWorker is available.
+  if (serviceWorker) {
+    serviceWorker
+      .register("./service-worker.js")
+      .then(() => console.log("ServiceWorker Registered to the Application!"))
+      .catch(() => console.log("Failed to Register the ServiceWorker."));
+  }
 }
