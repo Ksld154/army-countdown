@@ -3,6 +3,7 @@
     "start_url": "/",
     "display": "standalone",
     "theme_color": "#151514",
+    "background_color": "#0B3124",
     "orientation": "portrait",
     "icons": [
         {
